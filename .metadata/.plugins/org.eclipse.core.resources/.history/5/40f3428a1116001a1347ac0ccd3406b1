@@ -1,0 +1,30 @@
+package br.com.caelum.test;
+
+import java.math.BigDecimal;
+import java.util.Calendar;
+
+import javax.persistence.EntityManager;
+
+import br.com.caelum.model.Conta;
+import br.com.caelum.model.Movimentacao;
+import br.com.caelum.model.TipoMovimentacao;
+import br.com.caelum.util.JpaUtil;
+
+public class TestJPARelacionamento {
+	public static void main(String[] args) {
+		
+		Conta conta = new Conta("fernando", "123", "Bradesco", "123321");
+		Movimentacao movimentacao = new Movimentacao(new BigDecimal("200.00"), TipoMovimentacao.ENTRADA, Calendar.getInstance(), "xpto", conta);
+		
+		EntityManager em = JpaUtil.getEntityManager().createEntityManager();
+		em.getTransaction().begin();
+		
+		em.persist(conta);
+		
+//		em.persist(movimentacao);
+		
+		em.getTransaction().commit();
+		em.close();
+		
+	}
+}

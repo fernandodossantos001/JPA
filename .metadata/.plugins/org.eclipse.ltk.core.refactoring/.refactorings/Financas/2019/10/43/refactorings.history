@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 6 elements from project &apos;Financas&apos;&#x0D;&#x0A;- Original project: &apos;Financas&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     envers&#x0D;&#x0A;     jpa-metamodel-generator&#x0D;&#x0A;     optional&#x0D;&#x0A;     osgi&#x0D;&#x0A;     required&#x0D;&#x0A;     spatial" description="Delete elements" element1="lib/jpa-metamodel-generator" element2="lib/required" element3="lib/spatial" element4="lib/envers" element5="lib/optional" element6="lib/osgi" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="6" stamp="1571856885458" subPackages="false" version="1.0"/>
+</session>

@@ -1,0 +1,10 @@
+package br.com.caelum.test;
+
+import br.com.caelum.model.Categoria;
+
+public class MovimentacoesComCategoria {
+	Categoria categoria = new Categoria("Viagem");
+	Categoria categoria2 = new Categoria("Negocios");
+	
+
+}

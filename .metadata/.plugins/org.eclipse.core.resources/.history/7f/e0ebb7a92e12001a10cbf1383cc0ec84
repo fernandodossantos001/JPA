@@ -1,0 +1,13 @@
+package br.com.caelum.test;
+
+import br.com.caelum.model.Categoria;
+import br.com.caelum.model.Movimentacao;
+
+public class MovimentacoesComCategoria {
+	public static void main(String[] Args) {
+	Categoria categoria = new Categoria("Viagem");
+	Categoria categoria2 = new Categoria("Negocios");
+	Movimentacao movimentacao = new Movimentacao();
+	}
+
+}

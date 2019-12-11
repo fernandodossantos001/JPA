@@ -1,0 +1,19 @@
+package br.com.caelum.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.SequenceGenerators;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "categoria")
+@SequenceGenerator(name = "categoria", sequenceName = "T_SQ_CATEGORIA",allocationSize = 1)
+public class Categoria {
+	
+	@Id
+	@GeneratedValue(generator = "categoria", strategy = GenerationType.SEQUENCE)
+	private Integer id;
+}

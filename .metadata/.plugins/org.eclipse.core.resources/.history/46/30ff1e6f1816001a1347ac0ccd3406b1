@@ -1,0 +1,31 @@
+package br.com.caelum.test;
+
+import javax.persistence.EntityManager;
+
+import br.com.caelum.model.Cliente;
+import br.com.caelum.model.Conta;
+import br.com.caelum.util.JpaUtil;
+
+public class TestaContaCliente {
+
+	public static void main(String[] args) {
+		Cliente cliente = new Cliente();
+		Conta conta = new Conta();
+		
+		cliente.setEndereco("Rua 123");
+		cliente.setNome("Fernando");
+		cliente.setProfissao("Dev");
+		
+		conta.setId(1);
+		
+		EntityManager em = JpaUtil.getEntityManager().createEntityManager();
+		em.getTransaction().begin();
+		
+		cliente.setConta(conta);
+		
+		em.getTransaction().commit();
+		
+		em.close();
+	}
+
+}
